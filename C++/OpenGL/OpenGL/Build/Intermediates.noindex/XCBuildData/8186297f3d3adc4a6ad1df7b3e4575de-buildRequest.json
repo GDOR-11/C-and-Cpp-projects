@@ -1,0 +1,58 @@
+{
+  "_buildCommand2" : {
+    "command" : "build",
+    "skipDependencies" : false,
+    "style" : "buildAndRun"
+  },
+  "buildCommand" : "build",
+  "configuredTargets" : [
+    {
+      "guid" : "ca9ab29eefb3ad2bb20b7e52030a524fda0b6da75cf7c4a234a391577dbb8a5e"
+    }
+  ],
+  "containerPath" : "/Users/gabrielramalho/Desktop/programacao/C++/OpenGL/OpenGL.xcodeproj",
+  "continueBuildingAfterErrors" : false,
+  "enableIndexBuildArena" : false,
+  "hideShellScriptEnvironment" : false,
+  "parameters" : {
+    "action" : "build",
+    "activeArchitecture" : "arm64",
+    "activeRunDestination" : {
+      "disableOnlyActiveArch" : false,
+      "platform" : "macosx",
+      "sdk" : "macosx12.3",
+      "sdkVariant" : "macos",
+      "supportedArchitectures" : [
+        "arm64e",
+        "arm64",
+        "x86_64"
+      ],
+      "targetArchitecture" : "arm64"
+    },
+    "arenaInfo" : {
+      "buildIntermediatesPath" : "/Users/gabrielramalho/Desktop/programacao/C++/OpenGL/OpenGL/Build/Intermediates.noindex",
+      "buildProductsPath" : "/Users/gabrielramalho/Desktop/programacao/C++/OpenGL/OpenGL/Build/Products",
+      "derivedDataPath" : "/Users/gabrielramalho/Library/Developer/Xcode/DerivedData",
+      "indexDataStoreFolderPath" : "/Users/gabrielramalho/Library/Developer/Xcode/DerivedData/OpenGL-gwpxbsufhilhroaaavljgnglqhql/Index/DataStore",
+      "indexEnableDataStore" : true,
+      "indexPCHPath" : "/Users/gabrielramalho/Library/Developer/Xcode/DerivedData/OpenGL-gwpxbsufhilhroaaavljgnglqhql/Index/PrecompiledHeaders",
+      "pchPath" : "/Users/gabrielramalho/Desktop/programacao/C++/OpenGL/OpenGL/Build/Intermediates.noindex/PrecompiledHeaders"
+    },
+    "configurationName" : "Debug",
+    "overrides" : {
+      "synthesized" : {
+        "table" : {
+          "ENABLE_PREVIEWS" : "NO"
+        }
+      }
+    }
+  },
+  "schemeCommand" : "launch",
+  "schemeCommand2" : "launch",
+  "shouldCollectMetrics" : false,
+  "showNonLoggedProgress" : true,
+  "useDryRun" : false,
+  "useImplicitDependencies" : true,
+  "useLegacyBuildLocations" : false,
+  "useParallelTargets" : true
+}
