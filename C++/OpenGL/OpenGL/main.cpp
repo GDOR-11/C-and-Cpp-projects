@@ -123,37 +123,36 @@ int main(int argc, const char* argv[]) {
 
     glfwSetInputMode(renderer.window, GLFW_STICKY_KEYS, GL_TRUE);
     
-    renderer.createObject(vertexBuffer, UVbuffer, normalBuffer, elementBuffer, (unsigned int) indices.size(), textureID, 0.5, 10);
-    renderer.createObject(vertexBuffer2, UVbuffer2, normalBuffer2, elementBuffer2, (unsigned int) indices2.size(), textureID, 0.5, 10);
+    renderer.createObject(vertexBuffer, UVbuffer, normalBuffer, elementBuffer, (unsigned int) indices.size(), textureID, 0.75, 10);
+    renderer.createObject(vertexBuffer2, UVbuffer2, normalBuffer2, elementBuffer2, (unsigned int) indices2.size(), textureID, 0.25, 10);
     renderer.modelMatrices.push_back(glm::translate(glm::mat4(1), glm::vec3(-1.5, 0, 0)));
 	renderer.modelMatrices.push_back(glm::translate(glm::mat4(1), glm::vec3(1.5, 0, 0)));
     
-    LightSource light = {AMBIENT_LIGHT, glm::vec3(3, 0, 0), glm::vec3(0, 0, 0), glm::vec3(1, 1, 1), 0.1};
+    LightSource light = {AMBIENT_LIGHT, glm::vec3(3, 0, 0), glm::vec3(0, 0, 0), glm::vec3(1, 1, 1), 0.2};
     renderer.lights.push_back(light);
-    LightSource light2 = {DIRECTIONAL_LIGHT, glm::vec3(0, 0, 0), glm::vec3(-1, -1, -1), glm::vec3(1, 1, 1), 1};
+    LightSource light2 = {DIRECTIONAL_LIGHT, glm::vec3(0, 0, 0), glm::vec3(-1, -1, -1), glm::vec3(1, 1, 1), 0.5};
     renderer.lights.push_back(light2);
-    LightSource light3 = {POINT_LIGHT, glm::vec3(0, 0, 0), glm::vec3(0, 0, 0), glm::vec3(1, 1, 1), 1};
+    LightSource light3 = {POINT_LIGHT, glm::vec3(-1, 2, 0), glm::vec3(0, 0, 0), glm::vec3(1, 1, 1), 1};
     renderer.lights.push_back(light3);
     
 	
 //	glfwSwapInterval(0); // ONLY USE THIS FOR MEASURING PERFORMANCE. IT USES 100% GPU POWER
 	
     ControlableCamera camera;
-    unsigned int frameCount = 0;
-    
+    double simTime = 0;
+	double lastTime = glfwGetTime();
     do {
-        double time = glfwGetTime();
-
-		
+		double time = glfwGetTime();
         if(glfwGetKey(renderer.window, GLFW_KEY_SPACE) != GLFW_PRESS) {
-            camera.position = glm::vec3(7.5 * sin((float) frameCount / 60), 0, 7.5 * cos((float) frameCount / 60));
-			frameCount++;
+			camera.position = glm::vec3(7.5 * sin(simTime / 1.5), 0, 7.5 * cos(simTime / 1.5));
+			simTime += time - lastTime;
         }
         camera.lookAt(glm::vec3(0, 0, 0));
         renderer.cameraPosition = camera.position;
         renderer.cameraRotation = camera.rotation;
         renderer.render();
-
+		
+		lastTime = time;
     } while(!glfwWindowShouldClose(renderer.window));
 
 //    glDeleteBuffers(1, &elementBuffer);

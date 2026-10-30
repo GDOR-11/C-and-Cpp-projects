@@ -8,14 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		200ECC1A289A06C7003691FE /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 200ECC19289A06C7003691FE /* main.cpp */; };
-		202E2BDC289A0D8C0026F2BA /* libGLEW.2.2.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 202E2BDB289A0D8C0026F2BA /* libGLEW.2.2.0.dylib */; };
+		202E2BDC289A0D8C0026F2BA /* libGLEW.2.3.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 202E2BDB289A0D8C0026F2BA /* libGLEW.2.3.1.dylib */; };
 		202E2BE1289A12EA0026F2BA /* controls.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 202E2BDD289A12EA0026F2BA /* controls.cpp */; };
 		202E2BE2289A12EA0026F2BA /* 3Drenderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 202E2BDE289A12EA0026F2BA /* 3Drenderer.cpp */; };
 		202E2BE3289A12EA0026F2BA /* objloader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 202E2BDF289A12EA0026F2BA /* objloader.cpp */; };
 		202E2BE4289A12EA0026F2BA /* texture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 202E2BE0289A12EA0026F2BA /* texture.cpp */; };
 		202E2BE6289A13580026F2BA /* vboindexer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 202E2BE5289A13580026F2BA /* vboindexer.cpp */; };
-		205ECF2B289A09E700ED017A /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 205ECF2A289A09E700ED017A /* OpenGL.framework */; };
-		205ECF2F289A0AAA00ED017A /* libglfw.3.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 205ECF2E289A0AAA00ED017A /* libglfw.3.3.dylib */; };
+		205ECF2F289A0AAA00ED017A /* libglfw.3.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 205ECF2E289A0AAA00ED017A /* libglfw.3.5.dylib */; };
+		208463993093D87E0056AD17 /* libGLEW.2.3.1.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 202E2BDB289A0D8C0026F2BA /* libGLEW.2.3.1.dylib */; };
+		2084639B3093D87F0056AD17 /* libglfw.3.5.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 205ECF2E289A0AAA00ED017A /* libglfw.3.5.dylib */; };
+		2084639C3093D8800056AD17 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 205ECF2A289A09E700ED017A /* OpenGL.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,12 +30,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
+		2084639A3093D87E0056AD17 /* Embed Libraries */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2084639B3093D87F0056AD17 /* libglfw.3.5.dylib in Embed Libraries */,
+				208463993093D87E0056AD17 /* libGLEW.2.3.1.dylib in Embed Libraries */,
+			);
+			name = "Embed Libraries";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		200ECC16289A06C7003691FE /* OpenGL */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = OpenGL; sourceTree = BUILT_PRODUCTS_DIR; };
 		200ECC19289A06C7003691FE /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		202E2BDB289A0D8C0026F2BA /* libGLEW.2.2.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libGLEW.2.2.0.dylib; path = ../../../../../../opt/homebrew/Cellar/glew/2.2.0_1/lib/libGLEW.2.2.0.dylib; sourceTree = "<group>"; };
+		202E2BDB289A0D8C0026F2BA /* libGLEW.2.3.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libGLEW.2.3.1.dylib; path = /opt/homebrew/Cellar/glew/2.3.1/lib/libGLEW.2.3.1.dylib; sourceTree = "<absolute>"; };
 		202E2BDD289A12EA0026F2BA /* controls.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = controls.cpp; sourceTree = "<group>"; };
 		202E2BDE289A12EA0026F2BA /* 3Drenderer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = 3Drenderer.cpp; sourceTree = "<group>"; };
 		202E2BDF289A12EA0026F2BA /* objloader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = objloader.cpp; sourceTree = "<group>"; };
@@ -47,7 +61,7 @@
 		202E2BEC289A13C20026F2BA /* defaultVertexShader.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = defaultVertexShader.vert; sourceTree = "<group>"; };
 		202E2BED289A13C20026F2BA /* defaultFragmentShader.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = defaultFragmentShader.frag; sourceTree = "<group>"; };
 		205ECF2A289A09E700ED017A /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
-		205ECF2E289A0AAA00ED017A /* libglfw.3.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.3.dylib; path = ../../../../../../opt/homebrew/Cellar/glfw/3.3.7/lib/libglfw.3.3.dylib; sourceTree = "<group>"; };
+		205ECF2E289A0AAA00ED017A /* libglfw.3.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.5.dylib; path = /opt/homebrew/Cellar/glfw/3.5.1/lib/libglfw.3.5.dylib; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,9 +69,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				202E2BDC289A0D8C0026F2BA /* libGLEW.2.2.0.dylib in Frameworks */,
-				205ECF2F289A0AAA00ED017A /* libglfw.3.3.dylib in Frameworks */,
-				205ECF2B289A09E700ED017A /* OpenGL.framework in Frameworks */,
+				202E2BDC289A0D8C0026F2BA /* libGLEW.2.3.1.dylib in Frameworks */,
+				205ECF2F289A0AAA00ED017A /* libglfw.3.5.dylib in Frameworks */,
+				2084639C3093D8800056AD17 /* OpenGL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,8 +119,8 @@
 		205ECF29289A09E700ED017A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				202E2BDB289A0D8C0026F2BA /* libGLEW.2.2.0.dylib */,
-				205ECF2E289A0AAA00ED017A /* libglfw.3.3.dylib */,
+				202E2BDB289A0D8C0026F2BA /* libGLEW.2.3.1.dylib */,
+				205ECF2E289A0AAA00ED017A /* libglfw.3.5.dylib */,
 				205ECF2A289A09E700ED017A /* OpenGL.framework */,
 			);
 			name = Frameworks;
@@ -122,6 +136,7 @@
 				200ECC12289A06C7003691FE /* Sources */,
 				200ECC13289A06C7003691FE /* Frameworks */,
 				200ECC14289A06C7003691FE /* CopyFiles */,
+				2084639A3093D87E0056AD17 /* Embed Libraries */,
 			);
 			buildRules = (
 			);
@@ -298,16 +313,16 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				HEADER_SEARCH_PATHS = (
-					/opt/homebrew/Cellar/glfw/3.3.7/include,
+					/opt/homebrew/Cellar/glfw/3.5.1/include,
 					/usr/local/include,
-					/opt/homebrew/Cellar/glew/2.2.0_1/include,
-					/opt/homebrew/Cellar/glm/0.9.9.8/include,
+					/opt/homebrew/Cellar/glew/2.3.1/include,
+					/opt/homebrew/Cellar/glm/1.0.3/include,
 				);
 				INSTALL_PATH = /usr/local/bin;
 				LIBRARY_SEARCH_PATHS = (
 					usr/local/lib,
-					/opt/homebrew/Cellar/glfw/3.3.7/lib,
-					/opt/homebrew/Cellar/glew/2.2.0_1/lib,
+					/opt/homebrew/Cellar/glfw/3.5.1/lib,
+					/opt/homebrew/Cellar/glew/2.3.1/lib,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -318,16 +333,16 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				HEADER_SEARCH_PATHS = (
-					/opt/homebrew/Cellar/glfw/3.3.7/include,
+					/opt/homebrew/Cellar/glfw/3.5.1/include,
 					/usr/local/include,
-					/opt/homebrew/Cellar/glew/2.2.0_1/include,
-					/opt/homebrew/Cellar/glm/0.9.9.8/include,
+					/opt/homebrew/Cellar/glew/2.3.1/include,
+					/opt/homebrew/Cellar/glm/1.0.3/include,
 				);
 				INSTALL_PATH = /usr/local/bin;
 				LIBRARY_SEARCH_PATHS = (
 					usr/local/lib,
-					/opt/homebrew/Cellar/glfw/3.3.7/lib,
-					/opt/homebrew/Cellar/glew/2.2.0_1/lib,
+					/opt/homebrew/Cellar/glfw/3.5.1/lib,
+					/opt/homebrew/Cellar/glew/2.3.1/lib,
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
